@@ -11,15 +11,13 @@ int main() {
     char estado [8];
     char codigo [4];
     char cidade [20];
-    int  populacao;
+    int populacao;
     float area;
     float pib;
-    int pontos;
-
-        //pontos = pontos turisticos
+    int pontosturisticos;
 
     printf("Desafio super Trunfo Paises\n");
-    
+
     printf("Carta 1\n");
 
     printf("Estado: \n");
@@ -40,32 +38,29 @@ int main() {
     printf("PIB: \n");
     scanf("%f", &pib);
 
-    printf("Número de Pontos Turisticos: \n");
-    scanf("%d", &pontos);
+    printf("Numero de Pontos Turisticos: \n");
+    scanf("%d", &pontosturisticos);
 
     //Impressao da Carta1
 
-    printf("Carta 1\n");
-    printf("Estado: %s\n", estado);
-    printf("Código da Carta: %s\n", codigo);
-    printf("Nome da Cidade: %s\n", cidade);
-    printf("Populacao: %d\n", populacao);
-    printf("Area: %.2fkm2\n", area);
-    printf("PIB: %2.f\n", pib);
-    printf("Número de Pontos Turisticos: %d\n", pontos);
+    printf("Carta1 \n");
+    printf("Estado: %s \n", estado);
+    printf("Codigo: %s \n", codigo);
+    printf("Cidade: %s \n", cidade);
+    printf("Populacao: %d \n", populacao);
+    printf("Area: %.2f km2 \n", area);
+    printf("PIB: %.2f \n", pib);
+    printf("Numero de Pontos Turisticos: %d \n ", pontosturisticos);
 
-     
+    //Carta 2 
 
-        //Carta 2
     char estado2 [8];
     char codigo2 [4];
     char cidade2 [20];
-    int  populacao2;
+    int populacao2;
     float area2;
     float pib2;
-    int pontos2;
-
-    //pontos2= numeros de pontos turisticos 
+    int pontosturisticos2;
 
     printf("Carta 2\n");
 
@@ -87,19 +82,23 @@ int main() {
     printf("PIB: \n");
     scanf("%f", &pib2);
 
-    printf("Número de Pontos Turisticos: \n");
-    scanf("%d", &pontos2);
+    printf("Numero de Pontos Turisticos: \n");
+    scanf("%d", &pontosturisticos2);
 
     //Impressao da Carta2
 
-    printf("Carta 2\n");
-    printf("Estado: %s\n", estado2);
-    printf("Código da Carta: %s\n", codigo2);
-    printf("Nome da Cidade: %s\n", cidade2);
-    printf("Populacao: %d\n", populacao2);
-    printf("Area: %.2fkm2\n", area2);
-    printf("PIB: %2.f\n", pib2);
-    printf("Número de Pontos Turisticos: %d\n", pontos2);
+    printf("Carta1 \n");
+    printf("Estado: %s \n", estado2);
+    printf("Codigo: %s \n", codigo2);
+    printf("Cidade: %s \n", cidade2);
+    printf("Populacao: %d \n", populacao2);
+    printf("Area: %.2f km2 \n", area2);
+    printf("PIB: %.2f \n", pib2);
+    printf("Numero de Pontos Turisticos: %d \n ", pontosturisticos2);
+
+
+
+
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
