@@ -15,6 +15,8 @@ int main() {
     float area;
     float pib;
     int pontosturisticos;
+    float densidadepop;
+    float pibpercapita;
 
     printf("Desafio super Trunfo Paises\n");
 
@@ -51,6 +53,10 @@ int main() {
     printf("Area: %.2f km2 \n", area);
     printf("PIB: %.2f \n", pib);
     printf("Numero de Pontos Turisticos: %d \n ", pontosturisticos);
+    densidadepop = (float) populacao / area;
+    printf("Densidade populacional: %.1f \n", densidadepop); 
+    pibpercapita = (float) pib / populacao; 
+    printf("O PIB per Capito: %.1f \n", pibpercapita);
 
     //Carta 2 
 
@@ -61,6 +67,8 @@ int main() {
     float area2;
     float pib2;
     int pontosturisticos2;
+    float densidadepop2;
+    float pibpercapita2;
 
     printf("Carta 2\n");
 
@@ -95,9 +103,10 @@ int main() {
     printf("Area: %.2f km2 \n", area2);
     printf("PIB: %.2f \n", pib2);
     printf("Numero de Pontos Turisticos: %d \n ", pontosturisticos2);
-
-
-
+    densidadepop2 = (float) populacao2 / area2;
+    printf("Densidade populacional: %.1f \n", densidadepop2); 
+    pibpercapita2 = (float) pib2 / populacao2; 
+    printf("O PIB per Capito: %.1f \n", pibpercapita2);
 
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
