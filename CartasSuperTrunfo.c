@@ -127,6 +127,14 @@ int main() {
     printf("Densidade Populacional: Carta 1 venceu (%d) \n", densidadepop < densidadepop2);
     printf("PIB Percapita: Carta 1 venceu (%d) \n", pibpercapita > pibpercapita2);
     printf("Super Poder: Carta 1 venceu (%d) \n", superpoder > superpoder2);
+
+        //Comparativo das cartas
+    if (superpoder > superpoder2)
+    { printf("Carta 1 é vencedora Pelo Super Poder: %.2f \n", superpoder);}
+    else
+    {printf("Carta 2 é a vencedora pelo Super Poder: %.2f \n", superpoder2);}
+    
+    
    
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
