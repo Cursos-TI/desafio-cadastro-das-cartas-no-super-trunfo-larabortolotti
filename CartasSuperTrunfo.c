@@ -106,7 +106,7 @@ int main() {
     printf("Estado: %s \n", estado2);
     printf("Codigo: %s \n", codigo2);
     printf("Cidade: %s \n", cidade);
-    printf("Populacao: %u \n", populacao2);
+    printf("Populacao: %lu \n", populacao2);
     printf("Area: %.2f km2 \n", area2);
     printf("PIB: %.2f \n", pib2);
     printf("Numero de Pontos Turisticos: %d \n ", pontosturisticos2);
@@ -129,10 +129,66 @@ int main() {
     printf("Super Poder: Carta 1 venceu (%d) \n", superpoder > superpoder2);
 
         //Comparativo das cartas
-    if (superpoder > superpoder2)
-    { printf("Carta 1 é vencedora Pelo Super Poder: %.2f \n", superpoder);}
-    else
-    {printf("Carta 2 é a vencedora pelo Super Poder: %.2f \n", superpoder2);}
+    int opcao;
+
+    printf("Escolha um comparativo \n");
+    printf("1.Populacao \n");
+    printf("2.Area \n");
+    printf("3.PIB \n");
+    printf("4.Pontos Turisticos \n");
+    printf("5.Densidade Demografica \n");
+    scanf("%d", &opcao);
+
+    switch (opcao)
+    {
+    case 1:
+        if (populacao == populacao2)
+        {printf("Empate no quesito Populacao\n");        }
+        if (populacao > populacao2)
+        { printf("No quesito Populacao a Carta 1 venceu com valor de %lu \n", populacao);
+        }else {printf("No quesito Populacao a Carta 2 venceu com o valor de %lu \n", populacao2);
+        }       
+        break;
+    case 2: 
+        if (area == area2)
+        {printf("Empate no quesito Area \n"); }        
+        if (area > area2)
+        { printf("No quesito Area a Carta 1 venceu com valor de %.2f \n", area);
+        } else
+        {printf("No quesito Area a Carta 2 venceu com valor de %.2f \n", area2);
+        }
+        break;
+    case 3:
+        if (pib == pib2)
+        {printf("Empate no quesito PIB \n");    }
+        if (pib > pib2)
+        {printf("No quesito PIB a Carta 1 venceu com valor de %.2f \n", pib);
+        } else
+        {printf("No quesito PIB a Carta 2 venceu com valor de %.2f \n", pib2);
+        }
+        break;
+    case 4:
+        if (pontosturisticos == pontosturisticos2)
+        {printf("Empate no quesito Pontos Turisticos \n");        }
+        if (pontosturisticos > pontosturisticos2)
+        {printf("No quesito Pontos Turisticos a Carta 1 venceu com valor de %d \n", pontosturisticos);
+        } else
+        {printf("No quesito Pontos Turistivos a Carta 2 venceu com valor de %d \n", pontosturisticos2);
+        }
+        break;
+    case 5: 
+        if (densidadepop ==densidadepop2)
+        {printf("Empate no quesito Densidade Populacional \n");
+        } if (densidadepop < densidadepop2)
+        {printf("No quesito Densidade populacional, a Carta 1 venceu com o valor %.2f \n");
+        } else
+        {printf("No quesito Densidade Populacional, a Carta 2 venceu com o valor de %.2f", densidadepop2);
+        } 
+        break;
+             
+    default: printf("Opcao invalida");
+
+    }
     
     
    
