@@ -143,37 +143,38 @@ int main() {
     {
     case 1:
         if (populacao == populacao2)
-        {printf("Empate no quesito Populacao\n");        }
+        {printf("O Pais %s")
+            printf("Empate no quesito Populacao\n");        }
         if (populacao > populacao2)
-        { printf("No quesito Populacao a Carta 1 venceu com valor de %lu \n", populacao);
-        }else {printf("No quesito Populacao a Carta 2 venceu com o valor de %lu \n", populacao2);
+        { printf("No quesito Populacao, a Carta 1 venceu com valor de %lu \n", populacao);
+        }else {printf("No quesito Populacao, a Carta 2 venceu com o valor de %lu \n", populacao2);
         }       
         break;
     case 2: 
         if (area == area2)
         {printf("Empate no quesito Area \n"); }        
         if (area > area2)
-        { printf("No quesito Area a Carta 1 venceu com valor de %.2f \n", area);
+        { printf("No quesito Area, a Carta 1 venceu com valor de %.2f \n", area);
         } else
-        {printf("No quesito Area a Carta 2 venceu com valor de %.2f \n", area2);
+        {printf("No quesito Area, a Carta 2 venceu com valor de %.2f \n", area2);
         }
         break;
     case 3:
         if (pib == pib2)
         {printf("Empate no quesito PIB \n");    }
         if (pib > pib2)
-        {printf("No quesito PIB a Carta 1 venceu com valor de %.2f \n", pib);
+        {printf("No quesito PIB, a Carta 1 venceu com valor de %.2f \n", pib);
         } else
-        {printf("No quesito PIB a Carta 2 venceu com valor de %.2f \n", pib2);
+        {printf("No quesito PIB, a Carta 2 venceu com valor de %.2f \n", pib2);
         }
         break;
     case 4:
         if (pontosturisticos == pontosturisticos2)
         {printf("Empate no quesito Pontos Turisticos \n");        }
         if (pontosturisticos > pontosturisticos2)
-        {printf("No quesito Pontos Turisticos a Carta 1 venceu com valor de %d \n", pontosturisticos);
+        {printf("No quesito Pontos Turisticos, a Carta 1 venceu com valor de %d \n", pontosturisticos);
         } else
-        {printf("No quesito Pontos Turistivos a Carta 2 venceu com valor de %d \n", pontosturisticos2);
+        {printf("No quesito Pontos Turisticos, a Carta 2 venceu com valor de %d \n", pontosturisticos2);
         }
         break;
     case 5: 
