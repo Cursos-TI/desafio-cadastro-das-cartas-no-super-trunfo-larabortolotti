@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
 
         //Carta 1 
@@ -138,7 +132,7 @@ int main() {
     printf("Super Poder: Carta 1 venceu (%d) \n", superpoder > superpoder2);
 
         //Comparativo das cartas
-    int opcao;
+    int opcao, opcao2;
     int resultadoPop, resultadoPop2;
     int resultadoArea, resultadoArea2;
     int resultadoPIB, resultadoPIB2;
@@ -229,5 +223,115 @@ int main() {
 
     }
 
-    return 0;
-} 
+    printf("Escolha mais 1 atributo comparativo \n");
+    printf("1.Populacao \n");
+    printf("2.Area \n");
+    printf("3.PIB \n");
+    printf("4.Pontos Turisticos \n");
+    printf("5.Densidade Demografica \n");
+    scanf("%d", &opcao2);
+
+    switch (opcao2)
+    {
+    case 1:
+
+        resultadoPop = populacao > populacao2 ? 1 : 0;
+        resultadoPop2 = populacao < populacao2? 1 : 0; 
+        
+        if (resultadoPop)
+        {printf("O pais %s venceu no quesito populacao com o valor de %lu \n", pais, populacao);
+        } else if (resultadoPop2)       
+        {printf("O pais %s venceu no quesito populacao com o valor de %lu \n", pais2, populacao2);}
+        else
+        {printf("Empate no atributo Populacao\n");}
+        break;
+
+    case 2:
+        
+        resultadoArea = area > area2 ? 1 : 0;
+        resultadoArea2 = area < area2? 1 : 0;
+
+        if (resultadoArea)
+        {printf("O pais %s ganhou no atributo Area com o valor de %.2f km2\n", pais, area);
+        } else if (resultadoArea2)
+        {printf("O pais %s ganhou no atributo Area com o valor de %.2f km2\n", pais2, area2);            
+        } else
+        {printf("Empate no Atributo Area \n");
+        }
+        break;
+
+    case 3:
+        
+        resultadoPIB = pib > pib2 ? 1 : 0;
+        resultadoPIB2 = pib < pib2 ? 1 : 0;
+
+        if (resultadoPIB)
+        {printf("O pais %s ganhou no atributo PIB com o valor de %.2f \n", pais, pib);
+        } else if (resultadoPIB2)
+        {printf("O pais %s ganhou no atributo PIB com o valor de %.2f \n", pais2, pib2);
+        } else
+        {printf("Empate no atributo area \n");
+        }
+        break;
+
+    case 4: 
+        resultadoPontosTuristicos = pontosturisticos > pontosturisticos2 ? 1 : 0;
+        resultadoPontosTuristicos2 = pontosturisticos < pontosturisticos2 ? 1 : 0;
+
+        if (resultadoPontosTuristicos)
+        {printf("O pais %s ganhou no atributo Pontos Turisticos com o valor de %d \n", pais, pontosturisticos);
+        } else if (resultadoPontosTuristicos2)
+        {printf("O pais %s ganhou no atributo Pontos Turisticos com o valor de %d", pais2, pontosturisticos2);
+        } else
+        {printf("Empate no atributo Pontos Turisticos \n");
+        }
+        break;
+
+    case 5:
+
+        resultadoDensidadeDemografica = densidadepop < densidadepop2 ? 1 : 0;
+        resultadoDensidadeDemogratica2 = densidadepop > densidadepop2? 1 : 0;
+
+        if (resultadoDensidadeDemografica)
+        {printf("O pais %s ganhou no atributo Densidade demografica com o valor de %.2f \n", pais, densidadepop);
+        } else if (resultadoDensidadeDemogratica2)
+        {printf("O pais %s ganhou no atributo Densidade Demografica com o valor de %2.f \n", pais2, densidadepop2);
+        } else
+        {printf("Empate no atributo Densidade Demobrafica \n");
+        }
+        break;
+        
+    default: printf("Opcao invalida \n");
+    break;
+
+      return 0;
+}
+
+  //soma dos atributos 
+
+long int somacarta1;
+long int somacarta2; 
+
+    printf("Soma dos atributos das Cartas \n");
+
+  somacarta1 = (int) populacao + area + pib + pontosturisticos + (1/densidadepop);
+  printf("Valor da soma dos atributos da Carta 1, referente ao pais %s: %ld \n", pais, somacarta1);
+
+  somacarta2 = (int) populacao2 + area2 + pib2 + pontosturisticos2 + (1/densidadepop2);
+  printf("O valor da soma dos atributos  da Carta 2, referente ao pais %s: %ld \n ", pais2, somacarta2);
+
+    printf("Vencedor da rodada. \n");
+
+  if (somacarta1 > somacarta2)
+  {printf("A carta 1 venceu a rodada. \n");
+  } else if (somacarta1 < somacarta2)
+  {printf("A carta 2 venceu a rodada. \n");
+  } else
+  {printf("Houve empate das duas cartas na rodada.");
+  }
+  
+  
+  
+
+
+}
