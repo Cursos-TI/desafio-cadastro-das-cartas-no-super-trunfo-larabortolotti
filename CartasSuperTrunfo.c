@@ -9,6 +9,7 @@
 int main() {
 
         //Carta 1 
+    char pais [10];
     char estado [8];
     char codigo [4];
     char cidade [20];
@@ -24,6 +25,9 @@ int main() {
     printf("Desafio super Trunfo Paises\n");
 
     printf("Carta 1\n");
+
+    printf("Digite o pais: \n");
+    scanf("%s", pais);
 
     printf("Estado: \n");
     scanf("%s", estado);
@@ -49,6 +53,7 @@ int main() {
     //Impressao da Carta1
 
     printf("Carta1 \n");
+    printf("Pais: %s \n", pais);
     printf("Estado: %s \n", estado);
     printf("Codigo: %s \n", codigo);
     printf("Cidade: %s \n", cidade);
@@ -64,7 +69,7 @@ int main() {
     printf("Super Poder: %.2f\n", superpoder);
 
         //Carta 2 
-
+    char pais2 [10];
     char estado2 [8];
     char codigo2 [4];
     char cidade2 [20];
@@ -78,6 +83,9 @@ int main() {
 
 
     printf("Carta 2\n");
+
+    printf("Pais: \n");
+    scanf("%s", pais2);
 
     printf("Estado: \n");
     scanf("%s", estado2);
@@ -103,6 +111,7 @@ int main() {
     //Impressao da Carta2
 
     printf("Carta2 \n");
+    printf("Pais: %s \n", pais2);
     printf("Estado: %s \n", estado2);
     printf("Codigo: %s \n", codigo2);
     printf("Cidade: %s \n", cidade);
@@ -130,8 +139,14 @@ int main() {
 
         //Comparativo das cartas
     int opcao;
+    int resultadoPop, resultadoPop2;
+    int resultadoArea, resultadoArea2;
+    int resultadoPIB, resultadoPIB2;
+    int resultadoPontosTuristicos, resultadoPontosTuristicos2;
+    int resultadoDensidadeDemografica, resultadoDensidadeDemogratica2;
 
-    printf("Escolha um comparativo \n");
+
+    printf("Escolha um atributo comparativo \n");
     printf("1.Populacao \n");
     printf("2.Area \n");
     printf("3.PIB \n");
@@ -142,65 +157,77 @@ int main() {
     switch (opcao)
     {
     case 1:
-        if (populacao == populacao2)
-        {printf("Empate no quesito Populacao\n");}
-        else if (populacao > populacao2)
-        { printf("No quesito Populacao, a Carta 1 venceu com valor de %lu \n", populacao);}
-        else {printf("No quesito Populacao, a Carta 2 venceu com o valor de %lu \n", populacao2);        }       
+
+        resultadoPop = populacao > populacao2 ? 1 : 0;
+        resultadoPop2 = populacao < populacao2? 1 : 0; 
+        
+        if (resultadoPop)
+        {printf("O pais %s venceu no quesito populacao com o valor de %lu \n", pais, populacao);
+        } else if (resultadoPop2)       
+        {printf("O pais %s venceu no quesito populacao com o valor de %lu \n", pais2, populacao2);}
+        else
+        {printf("Empate no atributo Populacao\n");}
         break;
-    case 2: 
-        if (area == area2)
-        {printf("Empate no quesito Area \n"); }        
-         else if (area > area2)
-        { printf("No quesito Area, a Carta 1 venceu com valor de %.2f \n", area);
+
+    case 2:
+        
+        resultadoArea = area > area2 ? 1 : 0;
+        resultadoArea2 = area < area2? 1 : 0;
+
+        if (resultadoArea)
+        {printf("O pais %s ganhou no atributo Area com o valor de %.2f km2\n", pais, area);
+        } else if (resultadoArea2)
+        {printf("O pais %s ganhou no atributo Area com o valor de %.2f km2\n", pais2, area2);            
         } else
-        {printf("No quesito Area, a Carta 2 venceu com valor de %.2f \n", area2);
+        {printf("Empate no Atributo Area \n");
         }
         break;
+
     case 3:
-        if (pib == pib2)
-        {printf("Empate no quesito PIB \n");    }
-        else if (pib > pib2)
-        {printf("No quesito PIB, a Carta 1 venceu com valor de %.2f \n", pib);
+        
+        resultadoPIB = pib > pib2 ? 1 : 0;
+        resultadoPIB2 = pib < pib2 ? 1 : 0;
+
+        if (resultadoPIB)
+        {printf("O pais %s ganhou no atributo PIB com o valor de %.2f \n", pais, pib);
+        } else if (resultadoPIB2)
+        {printf("O pais %s ganhou no atributo PIB com o valor de %.2f \n", pais2, pib2);
         } else
-        {printf("No quesito PIB, a Carta 2 venceu com valor de %.2f \n", pib2);
+        {printf("Empate no atributo area \n");
         }
         break;
-    case 4:
-        if (pontosturisticos == pontosturisticos2)
-        {printf("Empate no quesito Pontos Turisticos \n");        }
-        else if (pontosturisticos > pontosturisticos2)
-        {printf("No quesito Pontos Turisticos, a Carta 1 venceu com valor de %d \n", pontosturisticos);
+
+    case 4: 
+        resultadoPontosTuristicos = pontosturisticos > pontosturisticos2 ? 1 : 0;
+        resultadoPontosTuristicos2 = pontosturisticos < pontosturisticos2 ? 1 : 0;
+
+        if (resultadoPontosTuristicos)
+        {printf("O pais %s ganhou no atributo Pontos Turisticos com o valor de %d \n", pais, pontosturisticos);
+        } else if (resultadoPontosTuristicos2)
+        {printf("O pais %s ganhou no atributo Pontos Turisticos com o valor de %d", pais2, pontosturisticos2);
         } else
-        {printf("No quesito Pontos Turisticos, a Carta 2 venceu com valor de %d \n", pontosturisticos2);
+        {printf("Empate no atributo Pontos Turisticos \n");
         }
         break;
-    case 5: 
-        if (densidadepop ==densidadepop2)
-        {printf("Empate no quesito Densidade Populacional \n");
-        } else if (densidadepop < densidadepop2)
-        {printf("No quesito Densidade populacional, a Carta 1 venceu com o valor %.2f \n");
+
+    case 5:
+
+        resultadoDensidadeDemografica = densidadepop < densidadepop2 ? 1 : 0;
+        resultadoDensidadeDemogratica2 = densidadepop > densidadepop2? 1 : 0;
+
+        if (resultadoDensidadeDemografica)
+        {printf("O pais %s ganhou no atributo Densidade demografica com o valor de %.2f \n", pais, densidadepop);
+        } else if (resultadoDensidadeDemogratica2)
+        {printf("O pais %s ganhou no atributo Densidade Demografica com o valor de %2.f \n", pais2, densidadepop2);
         } else
-        {printf("No quesito Densidade Populacional, a Carta 2 venceu com o valor de %.2f", densidadepop2);
-        } 
+        {printf("Empate no atributo Densidade Demobrafica \n");
+        }
         break;
-             
-    default: printf("Opcao invalida");
+        
+    default: printf("Opcao invalida \n");
+    break;
 
     }
-    
-    
-   
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
- 
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     return 0;
-}
+} 
